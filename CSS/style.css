@@ -1,0 +1,79 @@
+*{  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+font-family:serif ;
+}
+
+.topBar{
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(149, 151, 158);
+  outline: 3px double rgb(235, 223, 48);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+.logo{
+  text-shadow: 2px 1px rgb(235, 223, 48);
+  color: rgb(67, 74, 93);
+  margin-left: 13px;
+  transform: translateY(-60px);
+}
+
+button{
+  font-family:serif ;
+  padding: 10px;
+  background-color: rgb(235, 223, 48);
+}
+
+.ContactMe{
+  text-align: right;
+  margin: 13px;
+}
+
+.titleImageAndTxt{
+  position: relative;
+  width: 100%;
+  text-align: center; 
+}
+
+.titleImageAndTxt img{
+  display: block;
+  width: 100%;
+  height: auto; /* Maintain the aspect ratio */
+  position: relative;
+  z-index: -1;
+}
+
+
+p{
+margin: 30px;
+}
+
+.titlePart1{
+  text-shadow: 2px 1px rgb(235, 223, 48);
+  color: rgb(67, 74, 93);
+  text-align: left;
+  min-width: 100%;
+  font-size: 2.3em;
+  position: absolute;
+  top: 80px;
+  left: 110px;
+  
+/*    transform: translate(-70%, -100%);  */
+}
+
+.titlePart2{
+  text-shadow: 2px 1px rgb(235, 223, 48);
+  color: rgb(67, 74, 93);
+text-align: left;
+position: absolute;
+font-size: 1.6em;
+top: 170px;
+left: 190px;
+}
