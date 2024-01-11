@@ -11,69 +11,99 @@ font-family:serif ;
 .topBar{
   position: fixed;
   width: 100%;
-  height: 70px;
-  background-color: rgb(149, 151, 158);
-  outline: 3px double rgb(235, 223, 48);
-  outline-offset: -2px;
+  height: 80px;
   z-index: 1;
+  margin-top: 1px;
 }
 
-.logo{
-  text-shadow: 2px 1px rgb(235, 223, 48);
-  color: rgb(67, 74, 93);
-  margin-left: 13px;
-  transform: translateY(-60px);
+.topBarBackground{
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  background-color: #F0E7D8;
+  outline: 3px double #A1674A;
+  outline-offset: -2px;
+  z-index: -1;
+  opacity: 90%;
 }
 
-button{
-  font-family:serif ;
-  padding: 10px;
-  background-color: rgb(235, 223, 48);
+.logoTextBig{
+  color: rgb(0, 0, 0);
+  margin-left: 112px;
+  transform: translateY(12px);
+}
+.logoTextSmall{
+  color: rgb(0, 0, 0);
+  margin-left: 117px;
+  transform: translateY(10px);
+  font-size: 1rem;
+}
+.logoImg{
+  transform: translateY(-63px);
+  height: 77px;
+  width: auto;
+  border-radius: 50%;
+  margin-left: 18px;
 }
 
 .ContactMe{
-  text-align: right;
-  margin: 13px;
+  margin-right: 20px;
+  margin-top: 13px;
+  color: #F0E7D8;
+  background-color: #A63A50;
+  font-size: 1.3rem;
+  font-family:serif ;
+  padding: 15px;
+  float: right;  
 }
 
 .titleImageAndTxt{
-  position: relative;
-  width: 100%;
+  position: flex;;
   text-align: center; 
+  
 }
 
 .titleImageAndTxt img{
-  display: block;
-  width: 100%;
-  height: auto; /* Maintain the aspect ratio */
-  position: relative;
+  width: 100vw;
+  height: 100vh; 
+  object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
+  min-width: 600px;
+  min-height: 400px;
+  display: block; /* Removes any extra spacing below the image */
   z-index: -1;
+  filter: blur(1.5px);
 }
 
-
-p{
-margin: 30px;
-}
-
-.titlePart1{
-  text-shadow: 2px 1px rgb(235, 223, 48);
-  color: rgb(67, 74, 93);
+.titleText{
+  color: #F0E7D8;
   text-align: left;
-  min-width: 100%;
-  font-size: 2.3em;
+  max-width: 45%;
+  font-size: 1.1rem;
   position: absolute;
-  top: 80px;
-  left: 110px;
-  
-/*    transform: translate(-70%, -100%);  */
+  top: 20%;
+  left: 10%;
+  font-weight: 500;
 }
 
-.titlePart2{
-  text-shadow: 2px 1px rgb(235, 223, 48);
-  color: rgb(67, 74, 93);
-text-align: left;
-position: absolute;
-font-size: 1.6em;
-top: 170px;
-left: 190px;
+.mainImageTriangle{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 450px solid transparent;
+  border-bottom: 550px solid #A63A50;
+  opacity: 65%;
+  transform: translateY(15px);
+}
+
+.redBannerText{
+  width: 100%;
+  color: #F0E7D8;
+  background-color: #A63A50;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  transform: translateY(-2px);
 }
