@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body{
@@ -9,9 +10,10 @@ font-family:serif ;
 }
 
 .topBar{
+  overflow: hidden;
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 90px;
   z-index: 1;
   margin-top: 1px;
 }
@@ -31,12 +33,14 @@ font-family:serif ;
   color: rgb(0, 0, 0);
   margin-left: 112px;
   transform: translateY(12px);
+  font-weight: 900;
 }
 .logoTextSmall{
   color: rgb(0, 0, 0);
   margin-left: 117px;
   transform: translateY(10px);
   font-size: 1rem;
+  font-weight: 900;
 }
 .logoImg{
   transform: translateY(-63px);
@@ -58,31 +62,32 @@ font-family:serif ;
 }
 
 .titleImageAndTxt{
-  position: flex;;
+  position: relative;
   text-align: center; 
-  
+  background-color: rgb(0, 0, 0); /*set to make edges black else the blur effect makes them white*/
 }
 
 .titleImageAndTxt img{
   width: 100vw;
-  height: 100vh; 
+  height: 90vh; 
   object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
   min-width: 600px;
   min-height: 400px;
   display: block; /* Removes any extra spacing below the image */
-  z-index: -1;
-  filter: blur(1.5px);
+  filter: blur(1px);
+   position: relative;
 }
 
 .titleText{
   color: #F0E7D8;
   text-align: left;
   max-width: 45%;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   position: absolute;
-  top: 20%;
+  top: 23%;
   left: 10%;
   font-weight: 500;
+  text-align: center;
 }
 
 .mainImageTriangle{
@@ -91,19 +96,68 @@ font-family:serif ;
   right: 0;
   width: 0;
   height: 0;
-  border-left: 450px solid transparent;
-  border-bottom: 550px solid #A63A50;
-  opacity: 65%;
-  transform: translateY(15px);
+  border-left: 40vw solid transparent;
+  border-bottom: 60vw solid #A63A50;
+  opacity: 65%; 
+  z-index: 0;
 }
 
 .redBannerText{
   width: 100%;
   color: #F0E7D8;
   background-color: #A63A50;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 22%;
+  padding-right: 22%;
   padding-top: 50px;
   padding-bottom: 50px;
-  transform: translateY(-2px);
+  text-align: center;
+  font-weight: 500 ;
+  font-size: 1.2rem;
 }
+
+.columnsContainer{
+  display: grid;
+  overflow: hidden; /* Ensure the image doesn't overflow the grid item */
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 columns with equal width */
+  text-align: center;
+  width: 100%;
+  height: 600px;
+  font-size: 1.1rem;
+  color: #F0E7D8;
+}
+.column{
+  position: relative;
+  overflow: hidden; /* Ensure text does not overflow from the grid item */
+}
+
+.columnHeader{
+  align-items: center; /* Optional: Center items horizontally */
+  position: absolute;
+  top: 25%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%); /* Center the text container */
+  padding: 20px;
+  border: black solid 1px;
+/*   width: 90%; */
+  background-color: #A63A50;
+}
+
+.columnParagraph{
+  align-items: center; /* Optional: Center items horizontally */
+  position: absolute;
+  top: 70%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%); /* Center the text container */
+  padding: 20px;
+  border: black solid 1px;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.495);
+}
+
+
+.column img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover; /* Cut the sides off, maintaining aspect ratio */
+}
+
