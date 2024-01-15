@@ -9,7 +9,6 @@ body{
 }
 
 .topBar{
- /*  overflow: hidden; */ /* Ensure if an element overhangs the page it doesnt spawn a scroll bar */
   position: fixed; /* always in view in fixed position */
   width: 100%;
   height: 90px;
@@ -60,7 +59,7 @@ body{
 }
 
 .titleImageAndTxt{
-  overflow-x: hidden;
+  overflow-x: hidden; /* Ensure if an element overhangs the page it doesnt spawn a scroll bar */
   text-align: center; 
   background-color: rgb(0, 0, 0); /*set to make edges black else the blur effect makes them white*/
 }
@@ -155,5 +154,37 @@ body{
   width: 100%;
   height: 600px;
   object-fit: cover; /* Cut the sides off, maintaining aspect ratio */
+}
+
+.contactForm{
+  height: 600px;
+  width: 100%;
+  background-color: #000000;
+  outline: 2px solid #A1674A;
+  outline-offset: -2px;
+  text-align: center;
+  color: #F0E7D8;
+}
+
+.contactForm h1{
+  font-size: 2rem;;
+  position: relative;
+  top: 80px;
+  right: -5%;  
+  width: 40%;
+}
+
+.address{
+  position: relative;
+  top: 80px;
+  right: -10%;
+  width: 40%;
+  text-align: left;
+}
+
+.footer{
+  height: 100px;
+  width: 100%;
+  background-color: #AB9B96;
 }
 
