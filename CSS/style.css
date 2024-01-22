@@ -54,12 +54,6 @@
   float: right;  
 }
 
-/* .topBar h3{
-  position: relative;
-  float: right;
-  transform: translateY(-40px);
-} */
-
 .titleImageAndTxt{
   overflow-x: hidden; /* Ensure if an element overhangs the page it doesnt spawn a scroll bar */
   text-align: center; 
