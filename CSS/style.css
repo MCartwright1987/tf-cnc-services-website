@@ -4,6 +4,10 @@
   box-sizing: border-box; /* changes how the inspector shows measurements  */
 }
 
+body{
+  background-color:#AB9B96;
+}
+
 .topBar{
   position: fixed; /* always in view in fixed position */
   width: 100%;
@@ -95,9 +99,8 @@
 }
 
 .redBannerText{
-  width: 100%;
   color: white;
-  background-color: #A63A50;
+  background-color:#A63A50;
   padding-left: 22%;
   padding-right: 22%;
   padding-top: 50px;
@@ -105,6 +108,9 @@
   text-align: center;
   font-weight: 500 ;
   font-size: 1.2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gridContainer{
@@ -116,10 +122,13 @@
   height: 600px;
   font-size: 1.1rem;
   color: white;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .gridBox{
   position: relative;
   overflow: hidden; /* Ensure text does not overflow from the grid item */
+  min-width: 250px;
 }
 
 .gridBoxHeader{
@@ -154,12 +163,15 @@
 
 .contactForm{
   height: 600px;
-  width: 100%;
   background-color: #000000;
-  outline: 2px solid #A1674A;
+  /* outline: 2px solid #A1674A; */
+  border-top:2px solid #A1674A;
+  border-bottom:2px solid #A1674A;
   outline-offset: -2px;
   text-align: center;
   color: white;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .contactForm h1{
@@ -167,29 +179,25 @@
   position: relative;
   top: 45px;
   right: -5%;  
-  width: 40%;
+  width: 450px;
 }
 
 .address{
   position: relative;
   top: 70px;
   right: -5%;
-  width: 40%;
-  /* text-align: left; */
-/*   background-color: #A63A50; */
+  width: 450px;
 }
 
 form{
-  position: absolute;
+  position: relative;
   align-items: center;
-  display:flex;
   flex-direction: column;
-  width: 40%;
-  /* background-color: #A63A50; */
+  width: 450px;
   outline: solid 2px #A1674A;
   outline-offset: 5px;
-  right:  5%;
-  top: 1620px
+  left: 50%;
+  top: -65%;
 }
 
 .formHeader{
@@ -214,7 +222,6 @@ button{
   padding-left: 50px;
   padding-right: 50px;
   padding: 5px 55px 5px 55px;
-/*   background-color: #A63A50; */
 }
 
 .footer{
