@@ -22,7 +22,7 @@ body{
   background-color: #F0E7D8;
   outline: 3px double #A1674A;
   outline-offset: -2px;
-  opacity: 90%;
+  /*opacity: 90%; */
 }
 
 .logoTextBig{
