@@ -8,20 +8,26 @@ body{
   background-color:#AB9B96;
 }
 
-.topBar{
+.header{
   position: fixed; /* always in view in fixed position */
   width: 100%;
   height: 90px;
   z-index: 1;
 }
 
-.topBar h5{ /* number and email */
+.header .headerEmail{ /* number and email */
   transform: translate(-22px , -85px);
   position: fixed;
   right:0;
 }
 
-.topBarBackground{
+.header .headerPhone{ /* number and email */
+  transform: translate(-327px , -83px);
+  position: fixed;
+  right:0;
+}
+
+.headerBackground{
   position: fixed;
   width: 100%;
   height: 90px;
@@ -29,6 +35,20 @@ body{
   outline: 3px double #A1674A;
   outline-offset: -2px;
   /*opacity: 90%; */
+}
+
+.header .emailIcon{
+  position: fixed;
+  width: 20px;
+  right: 0;
+  transform: translate(-285px, -2px);
+}
+
+.header .phoneIcon{
+  position: fixed;
+  width: 18px;
+  right: 0;
+  transform: translate(-425px, -2px);
 }
 
 .logoTextBig{
@@ -52,7 +72,7 @@ body{
   margin-left: 18px;
 }
 
-.ContactMe{
+.ContactMeButton{
   position: relative;
   margin-right: 20px;
   margin-top: 10px;
@@ -76,7 +96,7 @@ body{
 
 .titleImageAndTxt img{
   width: 100vw;
-  height: 95vh; /* makes the red section partly visible*/
+  height: 95vh; /* makes the banner partly visible*/
   object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
   min-width: 600px;
   min-height: 400px;
@@ -86,7 +106,7 @@ body{
   transform: translate(50px , 30px);
 }
 
-.titleText{
+.titleImageAndTxt .titleText{
   color: white;
   text-align: left;
   max-width: 45%;
@@ -98,7 +118,7 @@ body{
   text-align: center;
 }
 
-.mainImageTriangle{
+.titleImageAndTxt .TitleImageTriangle{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -109,7 +129,7 @@ body{
   opacity: 65%; 
 }
 
-.redBannerText{
+.banner1Text{
   color: white;
   background-color:#A63A50;
   padding-left: 22%;
@@ -136,13 +156,13 @@ body{
   max-width: 1400px;
   margin: 0 auto;
 }
-.gridBox{
+.gridContainer .gridBox{
   position: relative;
   overflow: hidden; /* Ensure text does not overflow from the grid item */
   min-width: 250px;
 }
 
-.gridBoxHeader{
+.gridContainer .gridBoxHeader{
   align-items: center; /* Center items horizontally */
   position: absolute;
   top: 25%; 
@@ -154,25 +174,30 @@ body{
   background-color: #A63A50;
 }
 
-.gridBoxParagraph{
+.gridContainer .gridBoxParagraph{
   align-items: center; /* Center items horizontally */ 
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the text container */
   padding: 20px;
-  border: black solid 1px;
+/*   border: black solid 1px; */
   width: 90%;
-  background-color: rgba(0, 0, 0, 0.495);
+/*   background-color: rgba(0, 0, 0, 0.495); */
   font-size: smaller;
 }
 
-.gridBox img{
+.gridContainer .gridBox img{
   width: 100%;
   height: 600px;
   object-fit: cover; /* Cut the sides off, maintaining aspect ratio */
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
 }
 
+.gridContainer .gridBox:hover img {
+  filter: brightness(0.4); /* Darken the image on hover */
+}
 .banner2{
   background-color:#A63A50;
   height: 200px;
@@ -184,7 +209,7 @@ body{
 .banner2 h1{
   color: white;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .banner2 ul{
@@ -195,7 +220,8 @@ body{
   margin-right:  10%;
 }
 
-ul li{
+.banner2 ul li{
+  list-style: none;
   color: white;
   margin: 20px 25px 5px;
   font-size: 1.2rem;
@@ -204,7 +230,6 @@ ul li{
 .contactForm{
   height: 600px;
   background-color: #000000;
-  /* outline: 2px solid #A1674A; */
   border-top:2px solid #A1674A;
   border-bottom:2px solid #A1674A;
   outline-offset: -2px;
@@ -216,21 +241,21 @@ ul li{
 }
 
 .contactForm h1{
-  font-size: 2rem;;
   position: relative;
+  font-size: 2rem;;
   top: 45px;
   right: -5%;  
   width: 450px;
 }
 
-.address{
+.contactForm .address{
   position: relative;
   top: 70px;
   right: -5%;
   width: 450px;
 }
 
-form{
+.contactForm form{
   position: relative;
   align-items: center;
   flex-direction: column;
@@ -241,12 +266,12 @@ form{
   top: -60%;
 }
 
-.formHeader{
+.contactForm .formHeader{
   margin-bottom: 30px;
   text-decoration: underline;
 }
 
-input{
+.contactForm input{
   font-size: 1.2rem;
   margin-bottom: 30px;
   padding-left: 20px;
@@ -254,11 +279,11 @@ input{
   width: 100%;
 }
 
-.message{
+.contactForm .message{
   padding-bottom: 80px;
 }
 
-button{
+.contactForm button{
   font-size: 1.5rem;
   padding-left: 50px;
   padding-right: 50px;
@@ -271,3 +296,14 @@ button{
   background-color: #AB9B96;
 }
 
+.footer .atrib{
+  position: relative;
+  text-align: center;
+  padding-top: 80px;
+  color: #000000;
+}
+
+a {
+  color: black; /* Set the color to black */
+  text-decoration: none; /* Optional: Remove the underline */
+}
