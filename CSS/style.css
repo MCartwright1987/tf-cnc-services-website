@@ -6,6 +6,7 @@
 
 body{
   background-color:#AB9B96;
+  position: relative;
 }
 
 .header{
@@ -102,8 +103,11 @@ body{
   min-height: 400px;
   display: block; /* Removes any extra spacing below the image */
   filter: blur(1px);
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   transform: translate(50px , 30px);
+
 }
 
 .titleImageAndTxt .titleText{
