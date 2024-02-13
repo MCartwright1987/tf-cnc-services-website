@@ -8,28 +8,33 @@ body{
   background-color:#AB9B96;
   position: relative;
 }
+.headerConstraint{
+  position: absolute;
+  height: 1380px;
+  width:  100%;
+}
 
 .header{
-  position: fixed; /* always in view in fixed position */
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 90px;
   z-index: 1;
 }
 
 .header .headerEmail{ /* number and email */
-  transform: translate(-22px , -85px);
-  position: fixed;
+  position: absolute;
+  transform: translate(-20px, -174px);
   right:0;
 }
 
 .header .headerPhone{ /* number and email */
-  transform: translate(-327px , -83px);
-  position: fixed;
+  position: absolute;
+  transform: translate(-320px, -172px);
   right:0;
 }
 
 .headerBackground{
-  position: fixed;
   width: 100%;
   height: 90px;
   background-color: #F0E7D8;
@@ -39,34 +44,34 @@ body{
 }
 
 .header .emailIcon{
-  position: fixed;
-  width: 20px;
+  position: absolute;
+  width: 19px;
   right: 0;
-  transform: translate(-285px, -2px);
+  transform: translate(-280px, -91px);
 }
 
 .header .phoneIcon{
-  position: fixed;
-  width: 18px;
+  position: absolute;
+  width: 17px;
   right: 0;
-  transform: translate(-425px, -2px);
+  transform: translate(-417px, -91px);
 }
 
 .logoTextBig{
   color: rgb(0, 0, 0);
-  margin-left: 112px;
-  transform: translateY(12px);
+  margin-left: 117px;
+  transform: translateY(-80px);
   font-weight: 900;
 }
 .logoTextSmall{
   color: rgb(0, 0, 0);
   margin-left: 117px;
-  transform: translateY(10px);
+  transform: translateY(-80px);
   font-size: 1rem;
   font-weight: 900;
 }
 .logoImg{
-  transform: translateY(-63px);
+  transform: translateY(-152px);
   height: 77px;
   width: auto;
   border-radius: 50%;
@@ -74,16 +79,24 @@ body{
 }
 
 .ContactMeButton{
-  position: relative;
-  margin-right: 20px;
-  margin-top: 10px;
+  position: absolute;
+  top: 10px; /* Adjust the top value as needed */
+  right: 20px;
+  z-index: 2;
   color: white;
   background-color: #A63A50;
   font-size: 1.2rem;
-  font-family:serif ;
+  font-family: serif;
   padding: 10px;
-  float: right;  
+  cursor: pointer;
 }
+
+.ContactMeButton:hover{
+  color:black;
+  background-color:#A1674A;
+  outline: none;
+}
+  
 
 .titleImageAndTxt{
   position: relative;
@@ -154,7 +167,7 @@ body{
   grid-template-columns:  repeat(4, 1fr); /* Creates 4 gridBoxs with equal width */
   text-align: center;
   width: 100%;
-  height: 600px;
+  height: 460px;
   font-size: 1.1rem;
   color: white;
   max-width: 1400px;
@@ -192,6 +205,7 @@ body{
 }
 
 .gridContainer .gridBox img{
+  transform: translateY(-20px);
   width: 100%;
   height: 600px;
   object-fit: cover; /* Cut the sides off, maintaining aspect ratio */
@@ -227,7 +241,7 @@ body{
 .banner2 ul li{
   list-style: none;
   color: white;
-  margin: 20px 25px 5px;
+  margin: 25px 25px 5px;
   font-size: 1.2rem;
 }
 
