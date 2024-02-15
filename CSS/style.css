@@ -4,14 +4,18 @@
   box-sizing: border-box; /* changes how the inspector shows measurements  */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background-color:#AB9B96;
-  position: relative;
 }
 .headerConstraint{
   position: absolute;
-  height: 1380px;
+  height: 1335px;
   width:  100%;
+  top: 0;
 }
 
 .header{
@@ -70,7 +74,7 @@ body{
   font-size: 1rem;
   font-weight: 900;
 }
-.logoImg{
+.header .logoImg{
   transform: translateY(-152px);
   height: 77px;
   width: auto;
@@ -85,6 +89,7 @@ body{
   z-index: 2;
   color: white;
   background-color: #A63A50;
+  border: solid #000000;
   font-size: 1.2rem;
   font-family: serif;
   padding: 10px;
@@ -94,33 +99,27 @@ body{
 .ContactMeButton:hover{
   color:black;
   background-color:#A1674A;
-  outline: none;
 }
   
 
 .titleImageAndTxt{
   position: relative;
-  overflow: hidden; /* Ensure if an element overhangs the page it doesnt spawn a scroll bar */
-  text-align: center; 
-  background-color: rgb(0, 0, 0); /*set to make edges black else the blur effect makes them white*/
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  overflow: hidden; /* Ensure container doesn't allow child elements to overflow */
+  /* background-color: rgb(0, 0, 0); */ /*set to make edges black else the blur effect makes them white*/
+  /* z-index: -1; */
+  margin-top: 90px; /* Add margin to create space for the header */
 }
 
 .titleImageAndTxt img{
-  width: 100vw;
-  height: 95vh; /* makes the banner partly visible*/
+  width: 105vw;
+  height: 78vh; /* makes the banner partly visible*/
   object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
-  min-width: 600px;
-  min-height: 400px;
   display: block; /* Removes any extra spacing below the image */
-  filter: blur(1px);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  transform: translate(50px , 30px);
-
+  max-width: 1400px;
+ /*  filter: blur(1px); */
+  filter: brightness(0.9);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .titleImageAndTxt .titleText{
@@ -129,8 +128,8 @@ body{
   max-width: 45%;
   font-size: 1.1rem;
   position: absolute;
-  top: 23%;
-  left: 10%;
+  top: 12%;
+  left: 7%;
   font-weight: 500;
   text-align: center;
 }
@@ -141,8 +140,8 @@ body{
   right: 0;
   width: 0;
   height: 0;
-  border-left: 400px solid transparent;
-  border-bottom: 600px solid #A63A50;
+  border-left: 400px solid transparent;/* 400px */
+  border-bottom: 600px solid #A63A50;/* 600px */
   opacity: 65%; 
 }
 
@@ -167,7 +166,7 @@ body{
   grid-template-columns:  repeat(4, 1fr); /* Creates 4 gridBoxs with equal width */
   text-align: center;
   width: 100%;
-  height: 460px;
+  height: 420px;
   font-size: 1.1rem;
   color: white;
   max-width: 1400px;
@@ -198,24 +197,22 @@ body{
   left: 50%;
   transform: translate(-50%, -50%); /* Center the text container */
   padding: 20px;
-/*   border: black solid 1px; */
   width: 90%;
-/*   background-color: rgba(0, 0, 0, 0.495); */
   font-size: smaller;
 }
 
-.gridContainer .gridBox img{
-  transform: translateY(-20px);
+.gridContainer .gridBox img {
   width: 100%;
-  height: 600px;
-  object-fit: cover; /* Cut the sides off, maintaining aspect ratio */
+  height: 420px;
+  object-fit: cover;
   filter: brightness(0.8);
   transition: filter 0.3s ease;
 }
 
 .gridContainer .gridBox:hover img {
-  filter: brightness(0.4); /* Darken the image on hover */
+  filter: brightness(0.4);
 }
+
 .banner2{
   background-color:#A63A50;
   height: 200px;
@@ -273,6 +270,22 @@ body{
   width: 450px;
 }
 
+.contactForm .emailIcon{
+  position: absolute;
+  width: 20px;
+  filter: invert(100%);
+  top: 1733px;
+  left: 6.8%; 
+}
+
+.contactForm .phoneIcon{
+  position: absolute;
+  width: 18px;
+  filter: invert(100%);
+  top: 1785px;
+  left: 18%; 
+}
+
 .contactForm form{
   position: relative;
   align-items: center;
@@ -282,6 +295,7 @@ body{
   outline-offset: 5px;
   left: 50%;
   top: -60%;
+  z-index: 2; /* ensures the header does not interfere with selecting the name input */
 }
 
 .contactForm .formHeader{
@@ -290,7 +304,7 @@ body{
 }
 
 .contactForm input{
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -302,10 +316,12 @@ body{
 }
 
 .contactForm button{
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding-left: 50px;
   padding-right: 50px;
   padding: 5px 55px 5px 55px;
+  font-weight: bold;
+  background-color: #F0E7D8;
 }
 
 .footer{
@@ -325,3 +341,5 @@ a {
   color: black; /* Set the color to black */
   text-decoration: none; /* Optional: Remove the underline */
 }
+
+
