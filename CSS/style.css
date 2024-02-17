@@ -13,7 +13,7 @@ body{
 }
 .headerConstraint{
   position: absolute;
-  height: 1335px;
+  height: 1315px;
   width:  100%;
   top: 0;
 }
@@ -102,27 +102,24 @@ body{
 }
   
 
-.titleImageAndTxt{
+.heroContainer{
   position: relative;
   overflow: hidden; /* Ensure container doesn't allow child elements to overflow */
-  /* background-color: rgb(0, 0, 0); */ /*set to make edges black else the blur effect makes them white*/
-  /* z-index: -1; */
   margin-top: 90px; /* Add margin to create space for the header */
-}
-
-.titleImageAndTxt img{
-  width: 105vw;
-  height: 78vh; /* makes the banner partly visible*/
-  object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
-  display: block; /* Removes any extra spacing below the image */
   max-width: 1400px;
- /*  filter: blur(1px); */
-  filter: brightness(0.9);
   margin-left: auto;
   margin-right: auto;
 }
 
-.titleImageAndTxt .titleText{
+.heroContainer img{
+  width: 105vw;
+  height: 78vh; /* makes the banner partly visible*/
+  object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
+  display: block; /* Removes any extra spacing below the image */
+  filter: brightness(0.9);
+}
+
+.heroContainer .titleText{
   color: white;
   text-align: left;
   max-width: 45%;
@@ -134,7 +131,16 @@ body{
   text-align: center;
 }
 
-.titleImageAndTxt .TitleImageTriangle{
+.triangleContainer{
+  position: absolute;
+  width: 105vw;
+  max-width: 1400px; 
+
+  left: 50%;/*  sets the left position of the element to the center of its containing element. */
+  transform: translateX(-50%); /* then moves the element back by 50% of its own width, effectively centering it horizontally. */
+}
+
+.heroContainer .titleImageTriangle{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -150,8 +156,8 @@ body{
   background-color:#A63A50;
   padding-left: 22%;
   padding-right: 22%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   text-align: center;
   font-weight: 500 ;
   font-size: 1.2rem;
@@ -215,7 +221,7 @@ body{
 
 .banner2{
   background-color:#A63A50;
-  height: 200px;
+  height: 180px;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -274,16 +280,16 @@ body{
   position: absolute;
   width: 20px;
   filter: invert(100%);
-  top: 1733px;
-  left: 6.8%; 
+  left: 4.5%;
+  top: 193px;
 }
 
 .contactForm .phoneIcon{
   position: absolute;
-  width: 18px;
+  width: 20px;
   filter: invert(100%);
-  top: 1785px;
-  left: 18%; 
+  left: 30.5%;
+  top: 244px;
 }
 
 .contactForm form{
@@ -293,7 +299,7 @@ body{
   width: 450px;
   outline: solid 2px #A1674A;
   outline-offset: 5px;
-  left: 50%;
+  right: -50%;
   top: -60%;
   z-index: 2; /* ensures the header does not interfere with selecting the name input */
 }
