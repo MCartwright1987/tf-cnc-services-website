@@ -11,6 +11,10 @@ html {
 body{
   background-color:#AB9B96;
 }
+
+button{
+  font-family: serif;
+}
 .headerConstraint{
   position: absolute;
   height: 1315px;
@@ -91,7 +95,6 @@ body{
   background-color: #A63A50;
   border: solid #000000;
   font-size: 1.2rem;
-  font-family: serif;
   padding: 10px;
   cursor: pointer;
 }
@@ -121,7 +124,6 @@ body{
 
 .heroContainer .titleText{
   color: white;
-  text-align: left;
   max-width: 45%;
   font-size: 1.1rem;
   position: absolute;
@@ -213,6 +215,7 @@ body{
   object-fit: cover;
   filter: brightness(0.8);
   transition: filter 0.3s ease;
+  z-index: 4; /* so the hover function works over the txt */
 }
 
 .gridContainer .gridBox:hover img {
@@ -309,12 +312,15 @@ body{
   text-decoration: underline;
 }
 
-.contactForm input{
+.contactForm input,
+.contactForm textarea {
   font-size: 1rem;
-  margin-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 15px;
+  padding: 6px;
   width: 100%;
+  resize: none; /* Prevent resizing */
+  overflow: hidden; /* Hide scrollbar and disable scrolling */
+  font-family: inherit;
 }
 
 .contactForm .message{
@@ -322,12 +328,17 @@ body{
 }
 
 .contactForm button{
-  font-size: 1.1rem;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding: 5px 55px 5px 55px;
-  font-weight: bold;
-  background-color: #F0E7D8;
+  font-size: 1.2rem;
+
+  padding: 6px 50px 6px 50px;
+  color: white;
+  background-color:#A63A50;
+}
+
+.contactForm button:hover{
+  cursor: pointer;
+  background-color: #A1674A;
+  color: #000000;
 }
 
 .footer{
