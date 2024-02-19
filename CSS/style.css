@@ -25,61 +25,71 @@ button{
 .header{
   position: sticky;
   top: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 1;
+   width: 100%; 
+   height: 90px; 
+  z-index: 2;
+  background-color: #F0E7D8;
+  outline: 3px double #A1674A;
+  outline-offset: -2px;
 }
 
 .header .headerEmail{ /* number and email */
   position: absolute;
-  transform: translate(-20px, -174px);
+  transform: translate(-20px, 0px);
   right:0;
 }
 
 .header .headerPhone{ /* number and email */
   position: absolute;
-  transform: translate(-320px, -172px);
+  transform: translate(-320px, 0px);
   right:0;
-}
-
-.headerBackground{
-  width: 100%;
-  height: 90px;
-  background-color: #F0E7D8;
-  outline: 3px double #A1674A;
-  outline-offset: -2px;
-  /*opacity: 90%; */
 }
 
 .header .emailIcon{
   position: absolute;
   width: 19px;
   right: 0;
-  transform: translate(-280px, -91px);
+  transform: translate(-280px, 0px);
+  z-index: 4;
 }
 
 .header .phoneIcon{
   position: absolute;
-  width: 17px;
+  width: 16px;
   right: 0;
-  transform: translate(-417px, -91px);
+  transform: translate(-417px, 0px);
+}
+
+.facebookIcon img{
+  position: absolute;
+  width: 19px;
+  right: 0;
+  transform: translate(-455px,-1px);
+}
+
+.linkedinIcon img{
+  position: absolute;
+  width: 19px;
+  right: 0;
+  transform: translate(-495px,-1px);
 }
 
 .logoTextBig{
   color: rgb(0, 0, 0);
   margin-left: 117px;
-  transform: translateY(-80px);
+  transform: translateY(12px);
   font-weight: 900;
 }
 .logoTextSmall{
   color: rgb(0, 0, 0);
   margin-left: 117px;
-  transform: translateY(-80px);
+  transform: translateY(12px);
   font-size: 1rem;
   font-weight: 900;
 }
 .header .logoImg{
-  transform: translateY(-152px);
+  position: absolute;
+  transform: translateY(-62px);
   height: 77px;
   width: auto;
   border-radius: 50%;
@@ -215,8 +225,8 @@ button{
   object-fit: cover;
   filter: brightness(0.8);
   transition: filter 0.3s ease;
-  z-index: 4; /* so the hover function works over the txt */
 }
+  
 
 .gridContainer .gridBox:hover img {
   filter: brightness(0.4);
