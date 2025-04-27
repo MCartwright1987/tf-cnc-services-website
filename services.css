@@ -1,0 +1,179 @@
+.serviceSection {
+    display: flex;
+    height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .imageSpace {
+    flex: 2;
+    overflow: hidden;
+  }
+  
+  .imageSpace img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .breakdownsImage {
+    object-position: left;
+  }
+  
+  .textSpace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--section-background);
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .textSpace h1 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--primary-hover);
+  }
+  
+  .textSpace p {
+    margin: 30px;
+  }
+  
+  .divider {
+    height: 4px;
+    width: 80%;
+    max-width: 210px;
+    background-color: var(--primary-color);
+  }
+  
+  .bannerService {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bannerService button {
+    font-size: 1.2rem;
+    padding: 6px 30px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 200px;
+  }
+  
+  .bannerService button:hover {
+    background-color: var(--primary-hover);
+    color: var(--secondary-text-color);
+    cursor: pointer;
+  }
+  
+  .bannerService img {
+    margin-top: 50px;
+    width: 45px;
+  }
+  
+  .bannerImg {
+    max-width: 1200px;
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 1000px) {
+    /* .gridContainer {
+      grid-template-columns: repeat(2, minmax(190px, 1fr));
+    }
+  
+    .heroContainer .titleText {
+      font-size: 1.05rem;
+      max-width: 50%;
+    }
+  
+    .banner2 ul li {
+      margin: 25px 19px 5px;
+    }
+  
+    .contactFormSection {
+      display: grid;
+      grid-template-rows: repeat(2);
+      height: 1050px;
+    }
+  
+    .contactformBackground {
+      height: 1050px;
+    }
+  
+    .contactFormSection form {
+      position: relative;
+      bottom: 40px;
+    } */
+  
+    .serviceSection p {
+      font-size: 0.85em;
+    }
+  
+    /* #contactUsTarget {
+      transform: translateY(-25px);
+    }
+  
+    .menuItems {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 48px);
+    } */
+  }
+  
+  @media (max-width: 750px) {
+    /* .heroContainer .titleText {
+      font-size: 0.90rem;
+      max-width: 60%;
+      top: 32%;
+    } */
+  
+    /* .heroContainer .titleImageTriangle {
+      border-left: 280px solid transparent;
+      border-bottom: 430px solid #A63A50;
+    } */
+  
+    /* .banner2 {
+      font-size: 0.93rem;
+    }
+  
+    .banner2 ul li {
+      margin: 10px 20px 5px;
+      font-size: 1.1rem;
+    } */
+  
+    .serviceSection h1 {
+      font-size: 1.2em;
+    }
+  
+    .serviceSection p {
+      font-size: 0.8em;
+    }
+  
+    /* .gridContainer .gridBoxHeader {
+      font-size: 1.5rem;
+    }
+  
+    .gridContainer .gridBox img {
+      filter: brightness(0.6);
+    } */
+  
+    /* .gridContainer .gridBoxParagraph {
+      position: absolute;
+      top: 35%;
+      padding: 30px;
+      width: 100%;
+    } */
+  }
