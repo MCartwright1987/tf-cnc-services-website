@@ -58,6 +58,8 @@
     text-decoration: underline;
   }
   
+  /* this uses the class from the html body to only appy 
+     these when the page is active */
   .homePage .homeButton {
     color: var(--primary-hover);
     text-decoration: underline;
