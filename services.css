@@ -34,6 +34,12 @@
     margin-bottom: 10px;
     color: var(--primary-hover);
   }
+
+    .textSpace h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--primary-hover);
+  }
   
   .textSpace p {
     margin: 30px;
